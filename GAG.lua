@@ -166,3 +166,25 @@ local Slider = MainTab:CreateSlider({
       end
    end,
 })
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local Slider = PlayerTab:CreateSlider({
+    Name = "Jump Power",
+    Range = {50, 200},
+    Increment = 1,
+    Suffix = "JP",
+    CurrentValue = 50,
+    Flag = "JumpPowerSlider",
+    Callback = function(Value)
+        local character = LocalPlayer.Character
+        if character and character:FindFirstChildOfClass("Humanoid") then
+            character:FindFirstChildOfClass("Humanoid").JumpPower = Value
+        end
+    end,
+})
+
+-- Erkennen, wenn der Charakter neu gespawnt wird, und Humanoid aktualisieren
+player.CharacterAdded:Connect(function()
+    humanoid = updateHumanoid()
