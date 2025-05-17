@@ -188,3 +188,16 @@ local Slider = PlayerTab:CreateSlider({
 -- Erkennen, wenn der Charakter neu gespawnt wird, und Humanoid aktualisieren
 player.CharacterAdded:Connect(function()
     humanoid = updateHumanoid()
+end)
+
+local ESPTab = Window:CreateTab("ESP", nil) -- Title, Image
+local ESPSection = ESPTab:CreateSection("ESP")
+
+local ESPTab = Window:CreateTab("ESP", nil) -- Title, Image
+local Section = Tab:CreateSection("ESP")
+
+
+
+
+
+
