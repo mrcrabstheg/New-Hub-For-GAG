@@ -151,7 +151,7 @@ local DefaultSpeed = 16 -- Standard Roblox WalkSpeed
 local SpeedValue = DefaultSpeed
 local humanoid = updateHumanoid() -- Initiales Humanoid holen
 
--- Speed Slider
+--Speed Slider
 local Slider = MainTab:CreateSlider({
    Name = "Speed",
    Range = {0, 10000}, -- Min. und Max. Speed
